@@ -1,6 +1,7 @@
 package com.example.user.daycaremanagement.dao;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,10 +37,12 @@ public class InsereDado extends Activity {
                 String observacaoString = obsercao.getText().toString();
                 String resultado;
 
+
                 resultado = crud.insereDado(nomeString, dtNascimentoString, matriculaString, observacaoString);
 
                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
             }
         });
     }
+
 }

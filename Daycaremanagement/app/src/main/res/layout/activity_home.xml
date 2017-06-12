@@ -14,36 +14,73 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_child_care_white_36dp"
-        android:layout_marginTop="24dp"
-        android:id="@+id/cadastro"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@android:color/holo_orange_dark"
-        android:padding="-20dp"
-        android:elevation="24dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_attach_money_white_36dp"
-        android:layout_marginTop="49dp"
-        android:id="@+id/valor"
-        android:background="@android:color/holo_green_light"
-        android:layout_below="@+id/cadastro"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:elevation="24dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_assignment_white_36dp"
+        app:srcCompat="@drawable/ic_assignment_white_24dp"
         android:id="@+id/informacoes"
         android:background="@android:color/holo_red_dark"
-        android:elevation="24dp"
-        android:layout_above="@+id/valor"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:padding="10dp"
+        android:layout_alignTop="@+id/cadastro"
+        android:layout_toRightOf="@+id/cadastro"
+        android:layout_toEndOf="@+id/cadastro"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_local_dining_white_24dp"
+        android:id="@+id/alimentacao"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:layout_alignTop="@+id/carinho"
+        android:layout_alignLeft="@+id/informacoes"
+        android:layout_alignStart="@+id/informacoes" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_child_care_white_24dp"
+        android:id="@+id/cadastro"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:padding="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_query_builder_white_24dp"
+        android:id="@+id/horario"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:layout_alignTop="@+id/valorMensalidade"
+        android:layout_alignLeft="@+id/carinho"
+        android:layout_alignStart="@+id/carinho" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_attach_money_white_24dp"
+        android:id="@+id/valorMensalidade"
+        android:background="@android:color/holo_green_light"
+        android:padding="10dp"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/alimentacao"
+        android:layout_alignLeft="@+id/alimentacao"
+        android:layout_alignStart="@+id/alimentacao" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_child_friendly_white_24dp"
+        android:id="@+id/carinho"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/cadastro"
+        android:layout_alignLeft="@+id/cadastro"
+        android:layout_alignStart="@+id/cadastro" />
 </RelativeLayout>

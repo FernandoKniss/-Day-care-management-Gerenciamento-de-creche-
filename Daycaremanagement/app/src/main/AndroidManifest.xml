@@ -25,7 +25,10 @@
         <activity android:name=".dao.InsereDado" />
         <activity android:name=".dao.Consulta" />
         <activity android:name=".Alterar" />
-        <activity android:name=".ImageGaleriaActivity"></activity>
+        <activity android:name=".ImageGaleriaActivity" />
+        <activity android:name=".ValoresActivity" />
+        <activity android:name=".AlimentacaoActivity" />
+        <activity android:name=".ListRefeicaoActivity"></activity>
     </application>
 
 </manifest>

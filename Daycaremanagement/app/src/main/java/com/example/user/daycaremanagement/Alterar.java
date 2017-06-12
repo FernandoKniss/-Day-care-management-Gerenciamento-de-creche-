@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -43,6 +44,8 @@ public class Alterar extends Activity {
         matricula = (EditText) findViewById(R.id.editText7);
         observacao = (EditText) findViewById(R.id.editText8);
 
+        clear((ViewGroup)findViewById(R.id.Alter));
+
         alterar = (Button)findViewById(R.id.button2);
         deletar = (Button)findViewById(R.id.button3);
 
@@ -74,5 +77,21 @@ public class Alterar extends Activity {
                 finish();
             }
         });
+    }
+
+    public void clear(ViewGroup group) {
+
+        int count = group.getChildCount();
+        for (int i = 0; i < count; i++) {
+            View view = group.getChildAt(i);
+            if (view instanceof ViewGroup) {
+                clear((ViewGroup) view);
+                continue;
+            }
+            if (view instanceof EditText) {
+                ((EditText)view).setText("");
+                continue;
+            }
+        }
     }
 }

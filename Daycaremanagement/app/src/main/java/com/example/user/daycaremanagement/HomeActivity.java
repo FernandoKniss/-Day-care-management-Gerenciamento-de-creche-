@@ -2,7 +2,6 @@ package com.example.user.daycaremanagement;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -12,25 +11,25 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 
-import com.example.user.daycaremanagement.R;
 import com.example.user.daycaremanagement.dao.Consulta;
 import com.example.user.daycaremanagement.dao.InsereDado;
 
 import java.io.File;
 
+import static com.example.user.daycaremanagement.R.id.alimentacao;
 import static com.example.user.daycaremanagement.R.id.cadastro;
+import static com.example.user.daycaremanagement.R.id.carinho;
+import static com.example.user.daycaremanagement.R.id.horario;
 import static com.example.user.daycaremanagement.R.id.informacoes;
-import static com.example.user.daycaremanagement.R.id.valor;
+import static com.example.user.daycaremanagement.R.id.valorMensalidade;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton imageButton;
-    private ImageButton imageButton2;
-    private ImageButton imageButton3;
+    private ImageButton imageButton, imageButton2, imageButton3,
+            imageButton4, imageButton5, imageButton6;
 
     private static final int CAPTURAR_IMAGEM = 1;
     private Uri uri;
@@ -45,8 +44,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         imageButton.setOnClickListener(this);
         imageButton2 = (ImageButton) findViewById(R.id.informacoes);
         imageButton2.setOnClickListener(this);
-        imageButton3 = (ImageButton) findViewById(R.id.valor);
+        imageButton3 = (ImageButton) findViewById(R.id.valorMensalidade);
         imageButton3.setOnClickListener(this);
+        imageButton4 = (ImageButton) findViewById(R.id.carinho);
+        imageButton4.setOnClickListener(this);
+        imageButton5 = (ImageButton) findViewById(R.id.alimentacao);
+        imageButton5.setOnClickListener(this);
+        imageButton6 = (ImageButton) findViewById(R.id.horario);
+        imageButton6.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -58,8 +63,17 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case informacoes:
                 i = new Intent(this, Consulta.class);
                 break;
-            case valor:
-                i = new Intent(this, null);
+            case valorMensalidade:
+                i = new Intent(this, ValoresActivity.class);
+                break;
+            case carinho:
+                i = new Intent(this, HomeActivity.class);
+                break;
+            case alimentacao:
+                i = new Intent(this, AlimentacaoActivity.class);
+                break;
+            case horario:
+                i = new Intent(this, HomeActivity.class);
                 break;
         }
         if (i != null) {

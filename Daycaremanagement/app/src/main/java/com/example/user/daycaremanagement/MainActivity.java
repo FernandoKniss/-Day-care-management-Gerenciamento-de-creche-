@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        button = (Button) findViewById(R.id.logar);
+        button = (Button) findViewById(R.id.logar);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.sign_in_button:
                 signIn();
                 break;
-//            case R.id.sign_out_button:
-//                signOut();
+//            case R.id.button:
+//                startActivity();
 //                break;
 //            case R.id.disconnect_button:
 //                revokeAccess();
